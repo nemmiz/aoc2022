@@ -6,7 +6,7 @@ fn main() {
         if line.trim().is_empty() {
             calories.push(0);
         } else {
-            let n: i32 = line.parse::<i32>().expect("Not a number: {line}");
+            let n: i32 = line.parse::<i32>().unwrap();
             *calories.last_mut().unwrap() += n;
         }
     }
